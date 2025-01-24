@@ -1,0 +1,2 @@
+CREATE SCHEMA IF NOT EXISTS desafio;
+SET SEARCH_PATH = desafio;

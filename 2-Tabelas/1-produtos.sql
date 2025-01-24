@@ -18,8 +18,3 @@ COMMENT ON COLUMN produtos.precounitario IS 'Preço unitário do produto.';
 COMMENT ON COLUMN produtos.estoque IS 'Quantidade disponível no estoque.';
 COMMENT ON COLUMN produtos.dtinc IS 'Data e hora de criação do registro.';
 COMMENT ON COLUMN produtos.dtalt IS 'Data e hora de modificação.';
-
-
-
-
-
