@@ -4,7 +4,7 @@ CREATE TABLE clientes (
     nome VARCHAR(100) NOT NULL,
     telefone VARCHAR(15),
     email VARCHAR(100),
-    dtinc TIMESTAMPTZ NOT NULL,
+    dtinc TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
     dtalt TIMESTAMPTZ,
     CONSTRAINT pk_clientes_id PRIMARY KEY (id)
 );

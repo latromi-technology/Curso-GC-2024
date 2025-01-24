@@ -6,7 +6,7 @@ CREATE TABLE pedidos_itens (
     quantidade INTEGER NOT NULL,
     precounitario NUMERIC(10,2) NOT NULL,
     precototal NUMERIC(10,2) NOT NULL,
-    dtinc TIMESTAMPTZ NOT NULL,
+    dtinc TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
     dtalt TIMESTAMPTZ,
     CONSTRAINT pk_pedidos_itens_id PRIMARY KEY (id),
     CONSTRAINT fk_pedidos_itens_pedidos FOREIGN KEY (idpedido) REFERENCES pedidos(id) ON UPDATE CASCADE ON DELETE CASCADE,

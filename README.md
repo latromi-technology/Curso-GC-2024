@@ -60,7 +60,6 @@ Tabela que armazena os dados dos produtos.
 | id 🔑         | `SERIAL`        | NÃO          | Identificador único do produto.                     |
 | descricao      | `VARCHAR(200)`  | NÃO          | Descrição do produto.                               |
 | precounitario  | `NUMERIC(10,2)` | NÃO          | Preço unitário do produto.                          |
-| estoque        | `INTEGER`       | NÃO          | Quantidade disponível no estoque.                  |
 | dtinc          | `TIMESTAMPTZ`   | NÃO          | Data e hora de criação do registro.                |
 | dtalt          | `TIMESTAMPTZ`   | SIM          | Data e hora de modificação.                        |
 

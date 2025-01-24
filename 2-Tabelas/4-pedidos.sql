@@ -9,7 +9,7 @@ CREATE TABLE pedidos (
     status CHAR(1) NOT NULL DEFAULT 'T',
     dtcancelamento DATE,
     motivocancelamento VARCHAR(200),
-    dtinc TIMESTAMPTZ,
+    dtinc TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
     dtalt TIMESTAMPTZ,
     CONSTRAINT pk_pedidos_id PRIMARY KEY (id),
     CONSTRAINT fk_pedidos_clientes FOREIGN KEY (idcliente) REFERENCES clientes(id) ON DELETE RESTRICT ON UPDATE CASCADE,

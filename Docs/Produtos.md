@@ -26,7 +26,6 @@ Listar as seguintes informações:
 | Id            | Id do produto (Oculto e Chave).         |
 | Descrição     | Descrição do produto.                   |
 | Preço Unitário| Valor unitário do produto.              |
-| Estoque       | Quantidade disponível no estoque.       |
 | Data Inclusão | Data em que o produto foi cadastrado.   |
 | Data Alteração| Última data de modificação do cadastro. |
 

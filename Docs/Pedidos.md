@@ -5,7 +5,7 @@ Este é o cadastro de pedidos. Ele exige dependência de outras tabelas, como cl
 
 Requisitos:
 
-- Permitir a visualização de todos os pedidos.
+- Permitir apaneas a visualização dos pedidos incluídos pelo usuário (cada usuário só vê os seus pedidos).
 - Permitir incluir um novo pedido.
 - Permitir alterar um pedido existente.
 - Permitir excluir um pedido temporário (status `T`).
@@ -37,10 +37,13 @@ Listar as seguintes informações:
 #### Inclusão
 Adicione um botão para realizar a inclusão. Este botão deve chamar o objeto do tipo "Formulário" responsável pela inclusão do registro.
 
-Ao incluir um pedido:
-- O status inicial deve ser definido como `T` (Temporário).
-- Deve ser obrigatório associar ao menos um cliente, um vendedor e incluir ao menos um item no pedido.
-- O valor total deve ser calculado automaticamente com base nos itens.
+Ao abrir o Formulário de pedido em modo de inclusão:
+- Incluir um registro de pedido **temporário**, apenas com a data do pedido informada. O `ID` deste registro deve ser reservado para realizar a atualização dos dados quando o usuário clicar no botão de confirmar.
+
+Ao clicar no botao de confirmar:
+- Atualizar os dados do pedido, sendo obrigatório informar o cliente e o vendedor.
+- Na atualização dos dados do pedidos, o status deve ser trocado para **criado**.
+- O valor total deve ser calculado automaticamente com base nos itens do pedido.
 
 Após a inclusão do novo registro, os dados precisam ser atualizados automaticamente na listagem de dados.
 
@@ -61,18 +64,13 @@ Adicione uma coluna com um ícone que represente uma operação de edição, e a
 
 _Atenção: Não se esqueça de passar o parâmetro com o ID do registro para o objeto de edição._
 
-Regras específicas para alterações:
-- Somente pedidos com status `T` podem ser alterados.
-- Alterar o status do pedido para `C` deve ser feito somente ao concluir o pedido.
-- O valor total deve ser recalculado automaticamente ao alterar os itens do pedido.
-
 Após a edição do registro, os dados precisam ser atualizados automaticamente na listagem de dados.
 
 ## Especificações técnicas
 
 - Tabela de pedidos: `public.pedidos`
-- Tabela de itens do pedido: `public.pedidos_itens`
 - Tabela de vendedores: `public.vendedores`
 - Tabela de clientes: `public.clientes`
+- Tabela de itens do pedido: `public.pedidos_itens`
 - Tabela de produtos: `public.produtos`
 

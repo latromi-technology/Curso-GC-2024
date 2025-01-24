@@ -4,7 +4,7 @@ CREATE TABLE vendedores (
     nome VARCHAR(100) NOT NULL,
     email VARCHAR(100),
     telefone VARCHAR(15),
-    dtinc TIMESTAMPTZ NOT NULL,
+    dtinc TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
     dtalt TIMESTAMPTZ,
     CONSTRAINT pk_vendedores_id PRIMARY KEY (id)
 );
